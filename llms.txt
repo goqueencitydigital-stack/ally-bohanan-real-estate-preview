@@ -243,5 +243,5 @@ Facts on this site come from Ally’s own listings and sales record, official to
 
 ## Machine-readable
 
-- [Sitemap](https://allybohananrealestate.com/sitemap.xml): every indexable page with last-modified date, including all 193 journal articles
+- [Sitemap](https://allybohananrealestate.com/sitemap.xml): every indexable page with last-modified date, including all 194 journal articles
 - [Full text](https://allybohananrealestate.com/llms-full.txt): the main text of every page on this site in one file

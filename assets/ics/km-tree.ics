@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:km-tree@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261120T180000
+DTEND;TZID=America/New_York:20261120T200000
+SUMMARY:Kings Mountain Tree Lighting
+LOCATION:Patriots Park\, 220 S. Railroad Ave.\, Kings Mountain
+DESCRIPTION:The annual tree lighting ceremony that opens Christmas Kings Mountain in Patriots Park. Official details: https://www.gogastonnc.org/events/christmas-kings-mountain/kings-mountain-events/2026-12-05
+URL:https://www.gogastonnc.org/events/christmas-kings-mountain/kings-mountain-events/2026-12-05
+END:VEVENT
+END:VCALENDAR

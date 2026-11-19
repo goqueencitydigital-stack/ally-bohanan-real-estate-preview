@@ -14,6 +14,7 @@
   function hm(m) { var h = Math.floor(m / 60), mi = m % 60, ap = h < 12 ? 'a.m.' : 'p.m.'; h = h % 12 || 12; return h + (mi ? ':' + (mi < 10 ? '0' : '') + mi : '') + ' ' + ap; }
   function toMin(t) { if (!t) return null; var p = t.split(':'); return +p[0] * 60 + +p[1]; }
   function nextSat() { var d = new Date(A.today); d.setDate(d.getDate() + ((6 - d.getDay() + 7) % 7 || 7)); return A.iso(d); }
+  function span(e) { var f = function (x) { return new Date(x + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); }; return f(e.date) + ' through ' + f(e.end); }
   function maps(q) { return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q); }
   function guide(town) { var s = D.guides[town]; return s ? '<a class="link" href="' + B + '/' + s + '/">' + esc(town) + ' guide</a>' : ''; }
 
@@ -35,6 +36,9 @@
     evs.some(function (e) {
       var st = toMin(e.t24); if (st == null && !e.end) return false;
       if (st == null) st = w[0] + 60;
+      if (o.time === 'half' && st > w[1] && st <= WIN.evening[1]) { // half day: slide it so it ends with the evening event
+        w = [st - 180, st + 90]; note.push('Your half day starts in the afternoon so it can end at ' + e.title + ', which starts at ' + hm(st) + (hm(st).slice(-1) === '.' ? '' : '.'));
+      }
       if (st < w[0] - 30 || st > w[1]) return false;
       anchor = { kind: 'event', e: e, start: st, dur: e.cat === 'sports' ? 180 : 90, town: e.town }; return true;
     });
@@ -52,6 +56,7 @@
       return true;
     }
     var t = w[0], last = o.town, used = {}, lastCat = null;
+    if (anchor) D.places.forEach(function (p) { if (anchor.e.venue.indexOf(p.name) === 0) used[p.id] = 1; }); // don't send people to the event's venue twice
     function gap(town) { return town === last ? 15 : 30; }
     function addPlace(limit) {
       for (var pass = 0; pass < 2; pass++) for (var i = 0; i < pool.length; i++) {
@@ -94,8 +99,9 @@
       var nextTown = i && r.stops[i - 1].town !== s.town ? '<p class="muted wk-travel">Then head to ' + esc(s.town) + '. Leave travel time; check your map app for the drive.</p>' : '';
       if (s.kind === 'event') {
         var e = s.e;
-        html += '<li class="stop">' + '<div>' + nextTown + '<span class="time">' + (e.t24 ? hm(s.start) + ' · verified start time' : 'All day') + '</span><h3>' + esc(e.title) + '</h3>' +
-          '<p><strong>Why it fits:</strong> ' + esc(e.summary) + ' It is on your date, and the rest of the plan is timed around its verified start.</p><p class="muted">' + esc(e.venue) + ', ' + esc(e.town) + '</p>' +
+        html += '<li class="stop wk-ev">' + '<div>' + nextTown + '<span class="time">' + (e.t24 ? hm(s.start) + ' · verified start time' : 'All day') + '</span><h3>' + esc(e.title) + '</h3>' +
+          '<p><strong>Why it fits:</strong> ' + esc(e.summary) + ' It is on your date, and the rest of the plan is timed around its verified start.</p>' +
+          (e.end ? '<p class="muted">Runs ' + esc(span(e)) + '. Multi-day runs can skip some nights, so confirm your date on the official page.</p>' : '') + '<p class="muted">' + esc(e.venue) + ', ' + esc(e.town) + '</p>' +
           '<div class="btns"><a class="btn ghost sm" href="' + e.source + '" target="_blank" rel="noopener">Official event page</a><a class="link" href="' + maps(e.venue + ', ' + e.town) + '" target="_blank" rel="noopener">Directions</a>' +
           '<a class="link" href="' + B + '/assets/ics/' + e.id + '.ics" download>Save to Calendar</a>' + guide(e.town) + '</div></div></li>';
       } else {

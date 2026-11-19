@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:km-lights@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270102
+SUMMARY:Christmas Lights Extravaganza
+LOCATION:Patriots Park\, 220 S. Railroad Ave.\, Kings Mountain
+DESCRIPTION:Kings Mountain's Christmas light display runs every night from November 20 through New Year's. Official details: https://www.gastongov.com/calendar.aspx?view=list
+URL:https://www.gastongov.com/calendar.aspx?view=list
+END:VEVENT
+END:VCALENDAR

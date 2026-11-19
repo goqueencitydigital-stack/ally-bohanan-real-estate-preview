@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:rockhill-parade@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261204T183000
+DTEND;TZID=America/New_York:20261204T203000
+SUMMARY:Rock Hill Christmas Parade
+LOCATION:Oakland Avenue\, Old Town Rock Hill\, Rock Hill
+DESCRIPTION:The city's evening parade rolls down Oakland Avenue right after Winthrop's tree lighting\, during ChristmasVille weekend. Official details: https://www.winthrop.edu/president/faculty-and-staff-november-16-2026.aspx
+URL:https://www.winthrop.edu/president/faculty-and-staff-november-16-2026.aspx
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:winthrop-tree@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261204T180000
+DTEND;TZID=America/New_York:20261204T190000
+SUMMARY:Winthrop University 91st Annual Tree Lighting
+LOCATION:Front lawn of Tillman Hall\, Winthrop University\, Rock Hill
+DESCRIPTION:Performances by the Winthrop RockHettes\, Chorale and Collegiate Choir\, then the countdown to light the flagpole tree. Official details: https://www.winthrop.edu/alumni/upcoming-events.aspx
+URL:https://www.winthrop.edu/alumni/upcoming-events.aspx
+END:VEVENT
+END:VCALENDAR

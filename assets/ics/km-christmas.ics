@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:km-christmas@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261205T150000
+DTEND;TZID=America/New_York:20261205T200000
+SUMMARY:Christmas Kings Mountain Parade & Festival
+LOCATION:Downtown Kings Mountain & Patriots Park\, Kings Mountain
+DESCRIPTION:A downtown Christmas parade with a holiday bazaar\, live nativity\, train\, carriage and hay rides\, and Santa\, 3 to 8 p.m. Official details: https://www.gogastonnc.org/post/jingle-all-the-way-gaston-county-christmas-parades
+URL:https://www.gogastonnc.org/post/jingle-all-the-way-gaston-county-christmas-parades
+END:VEVENT
+END:VCALENDAR

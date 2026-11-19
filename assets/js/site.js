@@ -131,7 +131,7 @@
   }
 
   /* ---------- forms ---------- */
-  var ENDPOINT = { ally: 'https://formsubmit.co/ajax/ally@amb-homes.com', bohanan: 'https://formsubmit.co/ajax/Ally@BohananConstruction.com' };
+  var ENDPOINT = { ally: 'https://formsubmit.co/ajax/ally@amb-homes.com', bohanan: 'https://formsubmit.co/ajax/ally@amb-homes.com' };
   function fieldErr(el, msg) {
     var id = (el.id || (el.closest('fieldset') || {}).id) + '-e', e = d.getElementById(id);
     if (e) e.textContent = msg || '';
@@ -164,14 +164,26 @@
       var fd = new FormData(form), data = {};
       fd.forEach(function (v, k) { if (k === '_honey') return; data[k] = data[k] ? data[k] + ', ' + v : v; });
       if (data.include_context !== 'yes') delete data.context;
-      if (STAGING) {
+      var RELAY = (w.SITE && w.SITE.relay) || '';
+      if (STAGING && !RELAY) {
         st.className = 'form-status note'; st.innerHTML = '<strong>Review copy — nothing was sent.</strong> On the live site this message goes straight to ' + (form.dataset.route === 'bohanan' ? 'Bohanan Construction' : 'Ally') + '.';
         st.focus(); track('form_preview', { form_kind: form.dataset.form }); return;
       }
       var btn = $('button[type=submit]', form); btn.disabled = true; st.className = 'form-status'; st.textContent = 'Sending…';
-      data._subject = 'Website inquiry (' + form.dataset.form + ') from ' + (data.name || 'a visitor'); data._template = 'table'; data._captcha = 'false';
-      fetch(ENDPOINT[form.dataset.route] || ENDPOINT.ally, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && String(j.success) === 'true', j: j }; }); })
+      var req;
+      if (RELAY) {
+        /* Apps Script relay: JSON as text/plain (no CORS preflight); success only when the relay confirms Gmail accepted it */
+        form.dataset.sid = form.dataset.sid || (w.crypto && crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2));
+        data.form_kind = form.dataset.form; data.route = form.dataset.route || 'ally'; data.site_env = STAGING ? 'staging' : 'production'; data.submission_id = form.dataset.sid;
+        data.honeypot = data._honey || ''; data.form_title = (($('h2', form.closest('section') || form) || {}).textContent || '').trim().slice(0, 120);
+        req = fetch(RELAY, { method: 'POST', redirect: 'follow', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.accepted === true, j: j }; }); });
+      } else {
+        data._subject = 'Website inquiry (' + form.dataset.form + ') from ' + (data.name || 'a visitor'); data._template = 'table'; data._captcha = 'false'; data._cc = 'goqueencitydigital@gmail.com'; if (data.email) data._replyto = data.email;
+        req = fetch(ENDPOINT[form.dataset.route] || ENDPOINT.ally, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && String(j.success) === 'true', j: j }; }); });
+      }
+      req
         .then(function (res) {
           if (!res.ok) throw new Error('send');
           track('generate_lead', { form_kind: form.dataset.form, form_route: form.dataset.route });

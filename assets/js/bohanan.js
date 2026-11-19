@@ -59,4 +59,45 @@
       r.setAttribute('aria-valuetext', r.value < 50 ? 'Showing mostly the finished photo' : (r.value > 50 ? 'Showing mostly the construction photo' : 'Half and half'));
     });
   });
+
+  /* hub teaser: in-place hotspot cards (one open at a time, Esc closes, focus returns) */
+  $$('[data-hpop-wrap]').forEach(function (wrap) {
+    var btns = $$('[data-hpop]', wrap), open = null;
+    function close(back) {
+      if (!open) return;
+      var b = open, c = d.getElementById(b.getAttribute('aria-controls'));
+      b.setAttribute('aria-expanded', 'false'); b.classList.remove('on'); if (c) c.hidden = true;
+      open = null; wrap.classList.remove('has-open');
+      if (back) b.focus();
+    }
+    function show(b) {
+      if (open === b) { close(true); return; }
+      close(false);
+      var c = d.getElementById(b.getAttribute('aria-controls')); if (!c) return;
+      b.setAttribute('aria-expanded', 'true'); b.classList.add('on'); c.hidden = false;
+      open = b; wrap.classList.add('has-open');
+      try { c.focus({ preventScroll: true }); } catch (e) { c.focus(); }
+      if (window.matchMedia('(max-width:600px)').matches && c.scrollIntoView) c.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      if (A.track) A.track('hotspot_open', { feature: (c.querySelector('h3') || {}).textContent || '', where: 'hub' });
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function (e) { e.stopPropagation(); show(b); }); });
+    $$('[data-hpop-close]', wrap).forEach(function (x) { x.addEventListener('click', function (e) { e.stopPropagation(); close(true); }); });
+    $$('.bc-hp-card', wrap).forEach(function (c) { c.addEventListener('click', function (e) { e.stopPropagation(); }); });
+    wrap.addEventListener('keydown', function (e) { if ((e.key === 'Escape' || e.key === 'Esc') && open) { e.preventDefault(); close(true); } });
+    d.addEventListener('click', function () { close(false); });
+  });
+
+  /* explore page: #hs-<scene>-<n> opens that hotspot */
+  function fromHash() {
+    var id = (location.hash || '').slice(1); if (!/^hs-[\w-]+$/.test(id)) return;
+    var hs = $('[data-hs][aria-controls="' + id + '"]'); if (!hs) return;
+    if (hs.getAttribute('aria-expanded') !== 'true') hs.click();
+    var p = d.getElementById(id), wrap = hs.closest('.bc-hs') || hs;
+    setTimeout(function () {
+      var t = p && !p.hidden ? p : wrap, hd = d.querySelector('header'), off = hd ? Math.min(hd.getBoundingClientRect().height, 120) : 0;
+      window.scrollTo(0, t.getBoundingClientRect().top + window.pageYOffset - off - 16);
+      if (p) try { p.focus({ preventScroll: true }); } catch (e) {}
+    }, 60);
+  }
+  if ($('[data-hs]')) { window.addEventListener('hashchange', fromHash); if (d.readyState === 'complete') fromHash(); else window.addEventListener('load', fromHash); }
 })();

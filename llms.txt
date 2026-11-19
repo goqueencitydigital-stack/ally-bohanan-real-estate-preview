@@ -138,7 +138,7 @@ Facts on this site come from Ally’s own listings and sales record, official to
 - [2950 Cobby Creek Ct, Clover, SC](https://allybohananrealestate.com/sold-homes/2950-cobby-creek-ct-clover-sc/): 3 Bed home at 2950 Cobby Creek Ct, Clover, SC 29710, sold for $465,000. Ally represented the seller. Photos and listing details.
 - [3972 Shasta Cir, Clover, SC](https://allybohananrealestate.com/sold-homes/3972-shasta-cir-clover-sc/): 3 Bed home at 3972 Shasta Cir, Clover, SC 29710, sold for $340,000. Ally represented the seller. Photos and listing details.
 - [1030 Pepperwood Pl, Clover, SC](https://allybohananrealestate.com/sold-homes/1030-pepperwood-pl-clover-sc/): 4 Bed home at 1030 Pepperwood Pl, Clover, SC 29710, sold for $479,900. Ally represented the seller. Photos and listing details.
-- [208 Cross Creek Dr, Cherryville, NC](https://allybohananrealestate.com/sold-homes/208-cross-creek-dr-cherryville-nc/): 4 Bed home at 208 Cross Creek Dr, Cherryville, NC 28021, sold for $65,000. Ally represented the seller. Photos and listing details.
+- [208 Cross Creek Dr, Cherryville, NC](https://allybohananrealestate.com/sold-homes/208-cross-creek-dr-cherryville-nc/): land at 208 Cross Creek Dr, Cherryville, NC 28021, sold for $65,000. Ally represented the seller. Photos and listing details.
 - [1114 Mauney Rd, Stanley, NC](https://allybohananrealestate.com/sold-homes/1114-mauney-rd-stanley-nc/): 3 Bed home at 1114 Mauney Rd, Stanley, NC 28164, sold for $645,000. Ally represented the seller. Photos and listing details.
 - [1555 Pine Creek Rd, Gastonia, NC](https://allybohananrealestate.com/sold-homes/1555-pine-creek-rd-gastonia-nc/): 3 Bed home at 1555 Pine Creek Rd, Gastonia, NC 28056, sold for $375,000. Ally represented the seller. Photos and listing details.
 - [1664 Interstate View Ave, Gastonia, NC](https://allybohananrealestate.com/sold-homes/1664-interstate-view-ave-gastonia-nc/): 3 Bed home at 1664 Interstate View Ave, Gastonia, NC 28052, sold for $325,000. Ally represented the seller. Photos and listing details.
@@ -239,6 +239,7 @@ Facts on this site come from Ally’s own listings and sales record, official to
 
 - [Videos: Homes, Land and Builds in Gaston County](https://allybohananrealestate.com/videos/): Home tours, land walks and Bohanan Construction build videos from Gastonia, Bessemer City, Cherryville and across Gaston County.
 - [Privacy Policy](https://allybohananrealestate.com/privacy-policy/): How Ally Bohanan Real Estate collects, uses and protects information shared on this website.
+- [Photo Credits](https://allybohananrealestate.com/photo-credits/): Credits and licenses for the town, lake and landmark photos used on allybohananrealestate.com.
 
 ## Machine-readable
 

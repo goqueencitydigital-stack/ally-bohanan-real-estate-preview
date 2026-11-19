@@ -282,7 +282,7 @@
   if (lb && lb.showModal) {
     var srcs = []; try { srcs = JSON.parse($('[data-lb-src]', lb).textContent); } catch (e) {}
     var img = $('[data-lb-img]', lb), cap = $('[data-lb-cap]', lb), idx = 0, opener;
-    var show = function (i) { idx = (i + srcs.length) % srcs.length; img.src = srcs[idx]; img.alt = 'Photo ' + (idx + 1) + ' of ' + srcs.length; cap.textContent = (idx + 1) + ' / ' + srcs.length; };
+    var show = function (i) { idx = (i + srcs.length) % srcs.length; var u = srcs[idx]; img.src = (u.charAt(0) === '/' && u.charAt(1) !== '/') ? ((window.SITE && SITE.base) || '') + u : u; img.alt = 'Photo ' + (idx + 1) + ' of ' + srcs.length; cap.textContent = (idx + 1) + ' / ' + srcs.length; };
     $$('[data-lb-open]').forEach(function (b) { b.addEventListener('click', function () { opener = b; show(+b.dataset.lbOpen); lb.showModal(); d.body.classList.add('lock'); $('[data-lb-close]', lb).focus(); }); });
     $('[data-lb-prev]', lb).addEventListener('click', function () { show(idx - 1); });
     $('[data-lb-next]', lb).addEventListener('click', function () { show(idx + 1); });

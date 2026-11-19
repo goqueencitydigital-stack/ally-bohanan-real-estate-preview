@@ -2082,6 +2082,100 @@ section.open .facts li b{color:#E9CF8E}
 .harea-list a.on{color:var(--gold-ink)}
 @media (max-width:620px){.hm-l{font-size:19px;stroke-width:5px}.hc-l{display:none}.hc-lf{display:block;font-size:16px}.hm-legend{font-size:.62rem}}
 
+/* ---- inner.css ---- */
+/* Inner pages: home-page style for shared building blocks + tighter spacing (all pages) */
+:root{--sec:clamp(3.5rem,7vw,6.5rem)}
+.sec-sm{padding-block:clamp(2.75rem,5vw,4.5rem)}
+/* two light sections of the same color in a row: don't double the gap */
+main>section.white+section.white,
+main>section.sec:not(.white):not(.dark):not(.open):not(.close):not(.ivory2)+section.sec:not(.white):not(.dark):not(.open):not(.close):not(.ivory2),
+main>section.sec-sm:not(.white):not(.dark):not(.open):not(.close):not(.ivory2)+section.sec:not(.white):not(.dark):not(.open):not(.close):not(.ivory2),
+main>section.sec:not(.white):not(.dark):not(.open):not(.close):not(.ivory2)+section.sec-sm:not(.white):not(.dark):not(.open):not(.close):not(.ivory2){padding-top:0}
+
+/* Section headers like the home page */
+.hsec-h{margin-bottom:clamp(2rem,4vw,3.2rem);max-width:760px}
+.hsec-h.center{text-align:center;margin-inline:auto}
+.hsec-h h2{font-size:clamp(2.1rem,1.3rem + 3.2vw,4.3rem);line-height:1.02;margin:0 0 .3em}
+body:not(.home) .sec>.wrap>.eyebrow+h2,body:not(.home) .sec-sm>.wrap>.eyebrow+h2{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.6rem);line-height:1.04}
+.hrev-in .hr-grid{margin-top:0}
+
+/* Three-up feature cards (Pricing / Preparation / Launch etc.) */
+body:not(.home) .g3{counter-reset:g3}
+body:not(.home) .g3>div.card:not(:has(.frame)):not(:has(picture)){counter-increment:g3;position:relative;background:var(--ivory);border-radius:20px;padding:2.4rem 2rem 2.2rem;border-top:3px solid #C9A55A;box-shadow:0 20px 50px -34px rgba(25,24,22,.4);overflow:hidden}
+body:not(.home) .white .g3>div.card:not(:has(.frame)):not(:has(picture)){background:var(--ivory)}
+body:not(.home) .g3>div.card:not(:has(.frame)):not(:has(picture))::after{content:counter(g3,decimal-leading-zero);position:absolute;right:1.2rem;top:.6rem;font:700 3.6rem/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(179,151,101,.45);pointer-events:none}
+body:not(.home) .g3>div.card .meta{display:inline-block;align-self:flex-start;background:var(--gold-grad);color:var(--ink);padding:.45rem .8rem;border-radius:999px;font-size:.68rem;letter-spacing:.18em;margin:0}
+body:not(.home) .g3>div.card h3{text-transform:uppercase;font-size:clamp(1.15rem,1rem + .5vw,1.4rem)}
+.dark .g3>div.card:not(:has(.frame)):not(:has(picture)){background:#191816;color:var(--ivory);box-shadow:0 0 0 1px rgba(233,207,142,.22)}
+.dark .g3>div.card p{color:#CFC7B8}
+
+/* Interactive tools (timelines, planners) */
+body:not(.home) .tool{background:#fff;border:0;border-radius:22px;border-top:3px solid #C9A55A;box-shadow:0 1px 0 var(--line),0 30px 70px -40px rgba(25,24,22,.45);padding:clamp(1.5rem,3.5vw,2.8rem)}
+body:not(.home) .tool .choice span{border-radius:999px;padding-inline:1.15rem;border-color:#D8CDB6}
+body:not(.home) .tool .choice input:checked+span{background:#0B0A09;border-color:#0B0A09;color:#F3EEE5;box-shadow:inset 0 0 0 1px rgba(233,207,142,.5)}
+body:not(.home) .tool input[type=date],body:not(.home) .tool select,body:not(.home) .tool input[type=text],body:not(.home) .tool input[type=number]{border-radius:12px}
+body:not(.home) .tool .btn{border-radius:999px!important}
+.ig-head{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+
+/* Long-form guides with a side box */
+body:not(.home) .article .prose>h2{font-size:clamp(1.9rem,1.2rem + 2.4vw,3.2rem);line-height:1.04}
+body:not(.home) .article .prose h3{font:600 clamp(1.1rem,1rem + .45vw,1.35rem)/1.25 var(--serif);text-transform:uppercase;letter-spacing:.01em;padding-top:1.4rem;border-top:1px solid var(--line);margin:2rem 0 .6rem}
+body:not(.home) .dropcap::first-letter{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+body:not(.home) .aside-box{background:#0B0A09;background-image:radial-gradient(120% 80% at 100% 0,rgba(201,165,90,.22),transparent 60%);color:#F3EEE5;border:0;border-radius:20px;padding:1.6rem 1.6rem 1.2rem;box-shadow:0 30px 60px -36px rgba(0,0,0,.6)}
+body:not(.home) .aside-box h2{color:#E9CF8E;margin-bottom:1rem}
+body:not(.home) .aside-box li a{color:#F3EEE5;border-bottom-color:rgba(233,207,142,.2);display:flex;justify-content:space-between;gap:1rem}
+body:not(.home) .aside-box li a::after{content:"→";color:#E9CF8E;transition:transform .3s var(--ease)}
+body:not(.home) .aside-box li a:hover{color:#E9CF8E}
+body:not(.home) .aside-box li a:hover::after{transform:translateX(4px)}
+body:not(.home) .aside-box li:last-child a{border-bottom:0}
+
+@media (max-width:1000px){.hr-grid{grid-template-columns:1fr}}
+@media (max-width:700px){main>section.white+section.white{padding-top:0}}
+
+/* "The short answer" (AEO) lifted onto the hero like a magazine standfirst */
+main>section.open+section.sec-sm:has(>.wrap>.answer){padding-top:0;position:relative;z-index:2}
+main>section.open+section.sec-sm>.wrap>.answer{margin-top:clamp(-4.5rem,-5vw,-2.5rem)}
+body:not(.home) .answer{position:relative;max-width:none;background:#fff;border:0;border-radius:22px;border-top:3px solid #C9A55A;padding:clamp(1.6rem,3.4vw,2.6rem) clamp(1.5rem,4vw,3.2rem);box-shadow:0 30px 70px -40px rgba(25,24,22,.5)}
+body:not(.home) .answer::before{content:"\201C";position:absolute;right:1.4rem;top:-.25em;font:400 6.5rem/1 var(--script);color:#E9CF8E;pointer-events:none}
+body:not(.home) .ans-k{display:inline-block;background:var(--gold-grad);color:var(--ink);padding:.45rem .85rem;border-radius:999px;margin-bottom:1rem}
+body:not(.home) .ans-t{font:500 clamp(1.1rem,1rem + .55vw,1.45rem)/1.5 var(--serif);letter-spacing:-.005em}
+main>section.open+section.sec-sm>.wrap.narrow{max-width:1100px}
+
+/* Split sections: sticky title column, bigger titles */
+body:not(.home) .split.top>div:first-child>h2{font-size:clamp(1.8rem,1.15rem + 2.3vw,3.3rem);line-height:1.04}
+@media (min-width:901px){body:not(.home) .split.top>div:first-child:has(>h2){position:sticky;top:calc(var(--nav-h) + 1.5rem);align-self:start}}
+
+/* Numbered step lists sit in a dark luxury band */
+body:not(.home) main>section.sec-sm:has(.steps){background:#0B0A09;background-image:radial-gradient(70% 60% at 85% 0,rgba(201,165,90,.16),transparent 65%);color:#F3EEE5;padding-top:clamp(3.5rem,6vw,5.5rem)!important}
+body:not(.home) main>section.sec-sm:has(.steps) .eyebrow{color:#E9CF8E}
+body:not(.home) main>section.sec-sm:has(.steps) h2,body:not(.home) main>section.sec-sm:has(.steps) h3{color:#fff}
+body:not(.home) main>section.sec-sm:has(.steps) p,body:not(.home) main>section.sec-sm:has(.steps) .lede{color:#CFC7B8}
+body:not(.home) main>section.sec-sm:has(.steps) a{color:#E9CF8E}
+body:not(.home) main>section.sec-sm:has(.steps) .steps>li{border-top-color:rgba(233,207,142,.22)}
+body:not(.home) main>section.sec-sm:has(.steps)+section{padding-top:clamp(2.75rem,5vw,4.5rem)!important}
+
+/* Real place photos inside former colour plates */
+.plate.p-photo{background:#0B0A09}
+.plate.p-photo>picture{position:absolute;inset:0;z-index:-2}
+.plate.p-photo>picture img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.plate.p-photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,10,9,0) 45%,rgba(11,10,9,.62) 100%);pointer-events:none}
+a:hover .plate.p-photo>picture img{transform:scale(1.05)}
+.tp.tp-photo{background:#0B0A09!important;box-shadow:none!important}
+.tp.tp-photo>picture{position:absolute;inset:0;z-index:-2}
+.tp.tp-photo>picture img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.tp.tp-photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,10,9,.45) 0,rgba(11,10,9,0) 30%,rgba(11,10,9,0) 50%,rgba(11,10,9,.78) 100%)}
+.tp.tp-photo .tp-k{color:#fff!important}
+.tp.tp-photo .tp-w,.tp.tp-photo .tp-n{background:var(--gold-grad)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+a:hover .tp.tp-photo>picture img{transform:scale(1.05)}
+
+/* Photo credits */
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.4rem}
+.pc-card{margin:0;background:#fff;border-radius:18px;overflow:hidden;border-left:4px solid #C9A55A;box-shadow:0 18px 40px rgba(25,24,22,.07)}
+.pc-img{aspect-ratio:16/10;overflow:hidden}.pc-img picture,.pc-img img{width:100%;height:100%;object-fit:cover}
+.pc-card figcaption{padding:1.1rem 1.3rem 1.3rem}
+.pc-card h3{font:600 1rem/1.25 var(--serif);text-transform:uppercase;margin:0 0 .4rem}
+.pc-card p{font-size:var(--t-xs);color:var(--muted);margin:0}
+
 /* ---- life.css ---- */
 /* ===== Lifestyle v2: colourful weekend magazine inside the black / ivory / gold system (lf-*) ===== */
 .lf-page{--lf-black:#0B0A09;--lf-black-2:#191816;--lf-body-d:#D8D0C2;--lf-hair:rgba(233,207,142,.28)}
@@ -2620,6 +2714,12 @@ body:has(main>section.lf-hero:first-child) .crumbs a,body:has(main>section.xe-he
  .zform .carry .task{min-height:36px}
 }
 @media (max-width:760px){.zcollage{border-radius:0}}
+/* stats numbers: darker gold ink on the ivory band (>=3.5:1 large text) */
+.zstats dd{background:linear-gradient(90deg,var(--script-ink) 0%,var(--gold-ink) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:none}
+/* homes shown without a photo (only later photos by another brokerage exist) */
+.zph-none{display:flex;align-items:center;justify-content:center;background:#0B0A09!important;border-bottom:1px solid rgba(233,207,142,.35)}
+.zph-none span{display:inline-flex;align-items:center;gap:.45rem;font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#E9CF8E}
+.zph-none svg{width:16px;height:16px}
 
 /* ---- posts.css ---- */
 /* The Journal: posts, index, topic hubs (owned by pages_posts.py).

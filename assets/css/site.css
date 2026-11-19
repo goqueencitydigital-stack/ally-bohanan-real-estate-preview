@@ -105,7 +105,7 @@ h2{font-size:var(--t-xl)}
 .mega-vis .vis-txt span{font-size:var(--t-sm);color:#E6DFD1}
 
 /* Mobile menu */
-@media (max-width:1080px){
+@media (max-width:1180px){
   :root{--nav-h:72px}
   .nav,.hdr-tel,.hdr-cta .btn{display:none}
   .brand img{height:48px}
@@ -700,6 +700,14 @@ h3,h4,.card h3{letter-spacing:-.005em}
 .drawer-body>ul>li>a,.drawer-body summary{font-size:1.45rem;font-weight:500}
 .ftr-big{text-transform:uppercase;font-weight:600}
 
+/* Header nav: single line at every desktop width */
+.nav a,.nav button.navbtn,.hdr .btn{white-space:nowrap}
+.nav>ul{flex-wrap:nowrap}
+.hdr-in{gap:clamp(1rem,2vw,2rem)}
+@media (max-width:1360px) and (min-width:1181px){.nav>ul{gap:clamp(.8rem,1.4vw,1.4rem)}.nav a,.nav button.navbtn{font-size:.84rem;letter-spacing:.03em}}
+
+.nav>ul>li{display:flex;align-items:center;white-space:nowrap}
+
 /* ---- bohanan.css ---- */
 /* ---------- Bohanan Construction section + Should I Buy or Build? ---------- */
 .ar-43{aspect-ratio:4/3}
@@ -1038,14 +1046,14 @@ h3,h4,.card h3{letter-spacing:-.005em}
 
 /* Reviews */
 .hrev{background:#fff;padding:var(--sec) 0}
-.hr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,2.2vw,2rem);align-items:start}
-.hr-card{position:relative;margin:0;background:var(--ivory);border-radius:20px;padding:2.6rem 2rem 2rem;border-top:3px solid #C9A55A}
+.hr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,2.2vw,2rem);align-items:stretch}
+.hr-card{position:relative;margin:0;display:flex;flex-direction:column;height:100%;background:var(--ivory);border-radius:20px;padding:2.6rem 2rem 2rem;border-top:3px solid #C9A55A}
 .hr-q{position:absolute;top:-.35em;right:1.2rem;font:400 7rem/1 var(--script);color:#E9CF8E}
 .hr-card .stars{color:#C9A55A;letter-spacing:.2em;margin-bottom:1rem}
-.hr-card blockquote{margin:0}
+.hr-card blockquote{margin:0;flex:1}.hr-short{min-height:3.9em}
 .hr-short{font:600 clamp(1.15rem,1rem + .5vw,1.4rem)/1.3 var(--serif)!important;color:var(--ink);margin:0 0 1rem}
 .hr-full{font-size:var(--t-sm);color:var(--muted);margin:0 0 1.4rem}
-.hr-card figcaption{font:700 var(--t-xs)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.hr-card figcaption{margin-top:auto;padding-top:1.2rem;border-top:1px solid var(--line);font:700 var(--t-xs)/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase}
 .hr-card figcaption span{display:block;font-weight:500;letter-spacing:.06em;text-transform:none;color:var(--faint);margin-top:.2rem}
 .hr-note{text-align:center;margin:2rem 0 0;font-size:var(--t-xs);color:var(--faint)}
 @media (max-width:1000px){.hr-grid{grid-template-columns:1fr}}
@@ -1079,6 +1087,57 @@ h3,h4,.card h3{letter-spacing:-.005em}
 .hj-card p{color:#CFC7B8;font-size:var(--t-sm);flex:1}
 .hj-more{display:inline-flex;gap:.5rem;align-items:center;font:700 var(--t-xs)/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--script-light)}
 @media (max-width:1000px){.hj-grid{grid-template-columns:1fr}}
+
+/* Stats v2: numbers share one baseline, labels start at the same line */
+.hstats-row>div{justify-content:flex-end}
+.hstats dt{min-height:2.8em}
+.hstats dd.hs-sm{font-size:clamp(2.2rem,1.4rem + 3vw,4.2rem);line-height:1.14}
+@media (max-width:760px){
+  .hstats{padding:2.6rem 0 2rem}
+  .hstats-row{grid-template-columns:1fr 1fr;gap:.8rem;row-gap:.8rem}
+  .hstats-row>div{border:1px solid rgba(233,207,142,.28)!important;border-radius:14px;padding:1.3rem .6rem 1rem;background:linear-gradient(180deg,rgba(233,207,142,.07),rgba(233,207,142,0))}
+  .hstats-row>div+div{border-left:1px solid rgba(233,207,142,.28)}
+  .hstats dd{font-size:2.7rem}
+  .hstats dd.hs-sm{font-size:2.05rem;line-height:1.32}
+  .hstats dt{font-size:.66rem;letter-spacing:.16em;margin-top:.55rem;min-height:2.9em}
+  .hstats-note{margin-top:1.4rem}
+}
+
+/* Map v2: county shapes */
+.harea-map{padding:0;overflow:hidden;border:1px solid rgba(233,207,142,.25)}
+.hm-bg{fill:#0B0A09}
+.hc{stroke-linejoin:round}
+.hc-o{fill:#13110F;stroke:rgba(233,207,142,.16);stroke-width:1}
+.hc-f{fill:rgba(201,165,90,.16);stroke:rgba(233,207,142,.55);stroke-width:1.4}
+.hc-m{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.28);stroke-width:1.2}
+.hc-l{fill:rgba(233,207,142,.32);font:600 11px var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.hc-lf{fill:rgba(233,207,142,.75);font-size:13px;letter-spacing:.26em}
+.hm-line{fill:none;stroke:#E9CF8E;stroke-width:2;stroke-dasharray:2 5;stroke-linecap:round;opacity:.9}
+.hm-st{fill:rgba(233,207,142,.7);font:700 11px var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.hm-dot{fill:#E9CF8E;stroke:#0B0A09;stroke-width:2;transition:r .25s}
+.hm-l{fill:#F3EDE2;font:600 14px var(--sans);paint-order:stroke;stroke:#0B0A09;stroke-width:4px;stroke-linejoin:round}
+.hm-lb{font:700 16px var(--serif);letter-spacing:.14em;text-transform:uppercase;fill:#fff}
+.hm-clt{fill:#fff;stroke:#0B0A09;stroke-width:2}
+.hm-pin{fill:url(#hm-pin-g);fill:#E0BF73;stroke:#0B0A09;stroke-width:1.5}
+.hm-house{fill:#0B0A09}
+.hm-pulse{fill:rgba(233,207,142,.14);stroke:rgba(233,207,142,.5);transform-origin:center;animation:hmp 2.6s var(--ease) infinite}
+@keyframes hmp{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hm-pulse{animation:none}}
+.hm-call rect{fill:#E9CF8E}
+.hm-call-k{fill:#0B0A09;font:700 9px var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.hm-call-t{fill:#0B0A09;font:700 13px var(--serif);letter-spacing:.04em}
+.hm-a{cursor:pointer}
+.hm-a:hover .hm-dot,.hm-a.on .hm-dot{r:8;fill:#fff}
+.hm-a:hover .hm-l,.hm-a.on .hm-l{fill:#E9CF8E}
+.hm-legend{list-style:none;margin:0;padding:.9rem 1.2rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;border-top:1px solid rgba(233,207,142,.18);font:600 .7rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#CFC7B8}
+.hm-legend li{display:flex;align-items:center;gap:.5rem}
+.hm-legend i{display:inline-block;width:12px;height:12px;border-radius:50%}
+.lg-pin{background:#E0BF73;border-radius:50% 50% 50% 0!important;transform:rotate(-45deg)}
+.lg-dot{background:#E9CF8E;width:9px!important;height:9px!important}
+.lg-co{background:rgba(201,165,90,.35);border:1px solid rgba(233,207,142,.7);border-radius:3px!important}
+.lg-line{width:22px!important;height:0!important;border-radius:0!important;border-top:2px dotted #E9CF8E}
+.harea-list a.on{color:var(--gold-ink)}
+@media (max-width:620px){.hm-l{font-size:19px;stroke-width:5px}.hc-l{display:none}.hc-lf{display:block;font-size:16px}.hm-legend{font-size:.62rem}}
 
 /* ---- posts.css ---- */
 /* The Journal: posts, index, topic hubs (owned by pages_posts.py). Editorial magazine layout on the site tokens. */

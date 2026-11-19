@@ -56,10 +56,10 @@
   /* mobile action bar: hide while scrolling down, near footer or when a form field has focus */
   var mbar = $('[data-mbar]'), lastY = w.scrollY, ftr = $('.ftr');
   if (mbar) {
-    var hero = $('.hero');
+    var hero = $('main > section') || $('.hero');
     function tick() {
       var y = w.scrollY, nearEnd = ftr && ftr.getBoundingClientRect().top < w.innerHeight;
-      if (hero && hero.getBoundingClientRect().bottom > w.innerHeight * 0.35) nearEnd = true; // stay clear of the hero buttons
+      if (hero && hero.getBoundingClientRect().bottom > w.innerHeight * 0.5) nearEnd = true; // stay clear of the hero buttons
       mbar.classList.toggle('hide', nearEnd || (y > lastY + 4 && y > 400));
       if (y < lastY - 4) mbar.classList.toggle('hide', !!nearEnd);
       lastY = y;

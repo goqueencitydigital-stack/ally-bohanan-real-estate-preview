@@ -2342,6 +2342,21 @@ a:hover .tp.tp-photo>picture img{transform:scale(1.05)}
 @media (max-width:1000px){.ab-towns{grid-template-columns:repeat(2,minmax(0,1fr))}.ab-office-in{grid-template-columns:1fr}}
 @media (max-width:620px){.ab-team{grid-template-columns:1fr}.ab-office-card dl{grid-template-columns:1fr}}
 
+/* Mobile quick-action bar: docked, full width, never over the hero buttons */
+@media (max-width:760px){
+  .mbar{left:0!important;right:0!important;bottom:0!important;gap:0!important;justify-content:stretch!important;background:#0B0A09;border-top:1px solid rgba(233,207,142,.45);padding:0 0 env(safe-area-inset-bottom);box-shadow:0 -12px 30px rgba(0,0,0,.25)}
+  .mbar a,.mbar a.alt{flex:1 1 0;flex-direction:column;justify-content:center!important;gap:.3rem!important;min-height:60px;padding:.5rem .3rem!important;background:transparent!important;color:#F3EEE5!important;border:0!important;border-radius:0!important;font:600 .66rem/1 var(--sans)!important;letter-spacing:.14em!important;box-shadow:none!important}
+  .mbar a+a{border-left:1px solid rgba(233,207,142,.18)!important}
+  .mbar a:first-child{background:var(--gold-grad)!important;color:#0B0A09!important}
+  .mbar svg{width:18px;height:18px}
+  .mbar.hide{transform:translateY(110%)}
+  .ftr{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+}
+/* Mobile legibility floor for small labels */
+@media (max-width:760px){
+  .ans-k,.zbadge,.zmeta,.lf-tag,.bc-status,.bc-rel-tag,.xe-dow,.xe-si-date,.xe-chip,.xe-to,.cm-tag,.bc-ba-l,main label,main legend,main dt,main small,main th,.lf-chip{font-size:max(.72rem,11.5px)!important}
+}
+
 /* ---- life.css ---- */
 /* ===== Lifestyle v2: colourful weekend magazine inside the black / ivory / gold system (lf-*) ===== */
 .lf-page{--lf-black:#0B0A09;--lf-black-2:#191816;--lf-body-d:#D8D0C2;--lf-hair:rgba(233,207,142,.28)}

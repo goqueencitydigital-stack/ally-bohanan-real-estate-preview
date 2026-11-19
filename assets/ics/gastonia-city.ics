@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:gastonia-city@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261206T163000
+DTEND;TZID=America/New_York:20261206T183000
+SUMMARY:Christmas in the City & Jaycees Parade
+LOCATION:Rotary Pavilion\, 107 N. South St.\, Gastonia
+DESCRIPTION:Downtown Gastonia's celebration with the 79th Jaycees Christmas Parade. Official details: https://gastonianc.gov/residents/city-events
+URL:https://gastonianc.gov/residents/city-events
+END:VEVENT
+END:VCALENDAR

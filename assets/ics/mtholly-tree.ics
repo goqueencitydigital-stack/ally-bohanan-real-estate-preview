@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:mtholly-tree@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261201T180000
+DTEND;TZID=America/New_York:20261201T200000
+SUMMARY:Mount Holly Downtown Tree Lighting
+LOCATION:Main Street\, Mount Holly
+DESCRIPTION:Mount Holly's downtown tree lighting on Main Street. Official details: https://www.gastongov.com/Calendar.aspx?EID=2626
+URL:https://www.gastongov.com/Calendar.aspx?EID=2626
+END:VEVENT
+END:VCALENDAR

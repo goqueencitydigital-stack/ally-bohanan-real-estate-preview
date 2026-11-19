@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:knights-lights@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261125T170000
+DTEND;TZID=America/New_York:20261125T190000
+SUMMARY:Light the Knights
+LOCATION:Truist Field\, 324 S. Mint St.\, Charlotte
+DESCRIPTION:The Knights' ballpark turns into a holiday light show with skating and snow tubing on select dates through January 3. Official details: https://www.milb.com/charlotte-knights/ballpark/christmas
+URL:https://www.milb.com/charlotte-knights/ballpark/christmas
+END:VEVENT
+END:VCALENDAR

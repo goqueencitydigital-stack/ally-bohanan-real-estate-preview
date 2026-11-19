@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:festival-trees@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20270101
+SUMMARY:Festival of Trees
+LOCATION:Stowe Park\, 24 S. Main St.\, Belmont
+DESCRIPTION:Decorated trees fill Stowe Park every day in December. Official details: https://downtownbelmont.org/festival-of-trees/
+URL:https://downtownbelmont.org/festival-of-trees/
+END:VEVENT
+END:VCALENDAR

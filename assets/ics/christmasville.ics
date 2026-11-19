@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:christmasville@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261203T180000
+DTEND;TZID=America/New_York:20261203T200000
+SUMMARY:ChristmasVille Opening Ceremony
+LOCATION:Fountain Park\, 300 E. Main St.\, Rock Hill
+DESCRIPTION:Opens four days of ChristmasVille in Old Town Rock Hill\, December 3–6. Official details: https://www.christmasvillerockhill.com/
+URL:https://www.christmasvillerockhill.com/
+END:VEVENT
+END:VCALENDAR

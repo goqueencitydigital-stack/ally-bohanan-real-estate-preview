@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:panthers-seahawks@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20270103T130000
+DTEND;TZID=America/New_York:20270103T160000
+SUMMARY:Carolina Panthers vs. Seattle Seahawks
+LOCATION:Bank of America Stadium\, Charlotte
+DESCRIPTION:The regular-season home finale. Official details: https://www.nfl.com/schedules/2026/by-team/carolina-panthers
+URL:https://www.nfl.com/schedules/2026/by-team/carolina-panthers
+END:VEVENT
+END:VCALENDAR

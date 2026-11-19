@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:hornets-1216@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261216T190000
+DTEND;TZID=America/New_York:20261216T220000
+SUMMARY:Hornets vs. Clippers
+LOCATION:Spectrum Center\, 333 E. Trade St.\, Charlotte
+DESCRIPTION:Wednesday night NBA in Uptown. Official details: https://www.nba.com/hornets/game/0022600369-clippers-vs-hornets-charlotte-nc-12-16-2026
+URL:https://www.nba.com/hornets/game/0022600369-clippers-vs-hornets-charlotte-nc-12-16-2026
+END:VEVENT
+END:VCALENDAR

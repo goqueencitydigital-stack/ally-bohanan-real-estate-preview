@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:fortmill-village@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261203T170000
+DTEND;TZID=America/New_York:20261203T200000
+SUMMARY:Fort Mill Christmas Village & Tree Lighting
+LOCATION:Walter Y. Elisha Park\, 345 N. White St.\, Fort Mill
+DESCRIPTION:A holiday village and tree lighting in Fort Mill's big downtown park. Official details: https://fortmillsc.gov/Calendar.aspx?EID=980
+URL:https://fortmillsc.gov/Calendar.aspx?EID=980
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:fortmill-parade@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261205T110000
+DTEND;TZID=America/New_York:20261205T130000
+SUMMARY:79th Fort Mill Christmas Parade
+LOCATION:Downtown Fort Mill\, Fort Mill
+DESCRIPTION:A late-morning parade through downtown Fort Mill. Official details: https://www.fortmillsc.gov/calendar.aspx?EID=981
+URL:https://www.fortmillsc.gov/calendar.aspx?EID=981
+END:VEVENT
+END:VCALENDAR

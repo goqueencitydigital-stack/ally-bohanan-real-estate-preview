@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:mtholly-parade@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261205T150000
+DTEND;TZID=America/New_York:20261205T170000
+SUMMARY:Mount Holly Christmas Parade
+LOCATION:Downtown Mount Holly\, Mount Holly
+DESCRIPTION:Mount Holly's Saturday afternoon parade. Official details: https://www.gastongov.com/m/calendar/event/detail/2629
+URL:https://www.gastongov.com/m/calendar/event/detail/2629
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:cherryville-tree@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Cherryville Christmas Tree Lighting
+LOCATION:Cherryville's Gazebo Mini-Park\, Cherryville
+DESCRIPTION:Cherryville's downtown tree lighting. Confirm the time on Go Gaston before you go. Official details: https://www.gogastonnc.org/cherryville
+URL:https://www.gogastonnc.org/cherryville
+END:VEVENT
+END:VCALENDAR

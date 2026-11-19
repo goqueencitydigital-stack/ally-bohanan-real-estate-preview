@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:cltfc-playoff@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261128T123000
+DTEND;TZID=America/New_York:20261128T153000
+SUMMARY:Charlotte FC vs. Chicago Fire\, playoffs
+LOCATION:Bank of America Stadium\, Charlotte
+DESCRIPTION:Round One\, Game 2 of the MLS Cup Playoffs at home. Official details: https://www.charlottefootballclub.com/PLAYOFFS
+URL:https://www.charlottefootballclub.com/PLAYOFFS
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:stowe-holidays@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261128T170000
+DTEND;TZID=America/New_York:20261128T190000
+SUMMARY:Holidays at the Garden
+LOCATION:Daniel Stowe Conservancy\, 6500 S. New Hope Rd.\, Belmont
+DESCRIPTION:Garden lights on select evenings from November 28 through December 30. Official details: https://danielstoweconservancy.org/visit/holidays/
+URL:https://danielstoweconservancy.org/visit/holidays/
+END:VEVENT
+END:VCALENDAR

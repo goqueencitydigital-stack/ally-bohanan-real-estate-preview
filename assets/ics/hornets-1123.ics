@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:hornets-1123@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261123T190000
+DTEND;TZID=America/New_York:20261123T220000
+SUMMARY:Charlotte Hornets home game
+LOCATION:Spectrum Center\, 333 E. Trade St.\, Charlotte
+DESCRIPTION:Weeknight NBA in Uptown. Check the schedule for the opponent. Official details: https://www.cbssports.com/nba/teams/CHA/charlotte-hornets/schedule/
+URL:https://www.cbssports.com/nba/teams/CHA/charlotte-hornets/schedule/
+END:VEVENT
+END:VCALENDAR

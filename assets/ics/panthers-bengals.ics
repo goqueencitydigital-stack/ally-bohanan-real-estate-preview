@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:panthers-bengals@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261220T130000
+DTEND;TZID=America/New_York:20261220T160000
+SUMMARY:Carolina Panthers vs. Cincinnati Bengals
+LOCATION:Bank of America Stadium\, Charlotte
+DESCRIPTION:The last home game before Christmas. Official details: https://www.panthers.com/schedule/2026/
+URL:https://www.panthers.com/schedule/2026/
+END:VEVENT
+END:VCALENDAR

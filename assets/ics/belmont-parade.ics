@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:belmont-parade@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261201T150000
+DTEND;TZID=America/New_York:20261201T170000
+SUMMARY:Belmont Christmas Parade
+LOCATION:Main St. & Catawba St.\, Belmont
+DESCRIPTION:Floats and bands through downtown Belmont. Official details: https://downtownbelmont.org/belmont-christmas-parade/
+URL:https://downtownbelmont.org/belmont-christmas-parade/
+END:VEVENT
+END:VCALENDAR

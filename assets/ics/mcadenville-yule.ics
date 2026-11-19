@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:mcadenville-yule@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261210T173000
+DTEND;TZID=America/New_York:20261210T193000
+SUMMARY:Yule Log Parade
+LOCATION:100 Main St.\, McAdenville
+DESCRIPTION:A McAdenville tradition since 1949. Singing begins at 5:30 p.m. Official details: https://townofmcadenville.org/visitors/christmas-town-usa/
+URL:https://townofmcadenville.org/visitors/christmas-town-usa/
+END:VEVENT
+END:VCALENDAR

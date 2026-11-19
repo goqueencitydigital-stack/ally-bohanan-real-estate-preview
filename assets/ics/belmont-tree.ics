@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:belmont-tree@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261130T180000
+DTEND;TZID=America/New_York:20261130T190000
+SUMMARY:Belmont Christmas Tree Lighting
+LOCATION:Old City Hall\, 115 N. Main St.\, Belmont
+DESCRIPTION:Downtown Belmont lights its tree in front of Old City Hall. Official details: https://downtownbelmont.org/events-calendar/2026-christmas-tree-lighting/
+URL:https://downtownbelmont.org/events-calendar/2026-christmas-tree-lighting/
+END:VEVENT
+END:VCALENDAR

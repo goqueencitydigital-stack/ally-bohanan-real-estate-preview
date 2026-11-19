@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:mcadenville-lighting@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261201T173000
+DTEND;TZID=America/New_York:20261201T193000
+SUMMARY:Christmas Town USA Tree Lighting
+LOCATION:Dynamo 31\, 102 Main St.\, McAdenville
+DESCRIPTION:The lighting that opens McAdenville's season. Lights then run nightly\, 5:30–10 p.m.\, through December 26. Official details: https://townofmcadenville.org/visitors/christmas-town-usa/
+URL:https://townofmcadenville.org/visitors/christmas-town-usa/
+END:VEVENT
+END:VCALENDAR

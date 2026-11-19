@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:lowell-parade@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Lowell Christmas Parade
+LOCATION:McCord Family Park\, Lowell
+DESCRIPTION:Lowell's parade moves to a Monday this year. Confirm the start time on Go Gaston. Official details: https://www.gogastonnc.org/lowell
+URL:https://www.gogastonnc.org/lowell
+END:VEVENT
+END:VCALENDAR

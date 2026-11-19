@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:panthers-ravens@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261122T130000
+DTEND;TZID=America/New_York:20261122T160000
+SUMMARY:Carolina Panthers vs. Baltimore Ravens
+LOCATION:Bank of America Stadium\, Charlotte
+DESCRIPTION:A Sunday home game in Uptown Charlotte. Official details: https://www.panthers.com/schedule/2026/
+URL:https://www.panthers.com/schedule/2026/
+END:VEVENT
+END:VCALENDAR

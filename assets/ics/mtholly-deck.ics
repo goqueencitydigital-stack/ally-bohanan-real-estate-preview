@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:mtholly-deck@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261204T170000
+DTEND;TZID=America/New_York:20261204T200000
+SUMMARY:Deck the Hall
+LOCATION:The Grand Hall\, 400 E. Central Ave.\, Mount Holly
+DESCRIPTION:An evening holiday event at Mount Holly's Grand Hall. Official details: https://www.gastongov.com/m/calendar/event/detail/2629
+URL:https://www.gastongov.com/m/calendar/event/detail/2629
+END:VEVENT
+END:VCALENDAR

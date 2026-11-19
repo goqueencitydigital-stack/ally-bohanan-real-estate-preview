@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:bavarian@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20261212T110000
+DTEND;TZID=America/New_York:20261212T180000
+SUMMARY:Bavarian Holiday Fest
+LOCATION:Main Street\, Belmont
+DESCRIPTION:A German-style holiday market along Belmont's Main Street. Official details: https://www.visitnc.com/events/bavarian-holiday-fest-0
+URL:https://www.visitnc.com/events/bavarian-holiday-fest-0
+END:VEVENT
+END:VCALENDAR

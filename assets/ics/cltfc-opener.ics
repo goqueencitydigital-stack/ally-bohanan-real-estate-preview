@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ally Bohanan Real Estate//Lifestyle//EN
+BEGIN:VEVENT
+UID:cltfc-opener@allybohananrealestate.com
+DTSTAMP:20261119T120000Z
+DTSTART;TZID=America/New_York:20270221T150000
+DTEND;TZID=America/New_York:20270221T180000
+SUMMARY:Charlotte FC 2027 home opener vs. CF Montréal
+LOCATION:Bank of America Stadium\, Charlotte
+DESCRIPTION:The first home match of the 2027 season. Official details: https://www.charlottefootballclub.com/schedule/2027
+URL:https://www.charlottefootballclub.com/schedule/2027
+END:VEVENT
+END:VCALENDAR
